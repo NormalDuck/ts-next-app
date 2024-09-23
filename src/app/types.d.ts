@@ -1,3 +1,6 @@
+/**
+ * Re-exports `NamedColor` from the internal modules.
+ */
 export declare type NamedColor =
 	| "aliceblue"
 	| "antiquewhite"

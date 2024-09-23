@@ -1,21 +1,23 @@
 "use client";
-import { Button } from "@nextui-org/react";
-import { useAtom } from "jotai";
-import Link from "next/link";
 
-import { Providers } from "./provider";
-import { testAtom } from "./store/test";
+import { useAtomValue } from "jotai/react";
+import { Input } from "@nextui-org/react";
+
+import { usernameAtom } from "./store/username";
+
 export default function Home() {
-	const [test, setTest] = useAtom(testAtom);
-	return (
+	const username = useAtomValue(usernameAtom);
+
+	return username === "" ? (
 		<>
-			<Providers>
-				<h1>
-					Welcome to <Link href={"/page"}>click me</Link>
-				</h1>
-				<div />
-				<Button onClick={() => setTest((get) => get + 1)}>{test.toString()}</Button>
-			</Providers>
+			<div className="size-8" />
+			<text className="flex justify-center">We never saw you before. Tell us your name.</text>
+			<div className="size-3" />
+			<Input className="justify-self-center flex max-w-64" label="username" type="username">
+				hello
+			</Input>
 		</>
+	) : (
+		<></>
 	);
 }

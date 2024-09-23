@@ -6,5 +6,9 @@ interface CellProps {
 	color?: NamedColor | (string & {});
 }
 export function Cell({ name, color }: CellProps) {
-	return <Button style={{ backgroundColor: color, width: 110, height: 110 }}>{name}</Button>;
+	return (
+		<Button disableRipple style={{ backgroundColor: color, width: 110, height: 110 }}>
+			{name}
+		</Button>
+	);
 }
