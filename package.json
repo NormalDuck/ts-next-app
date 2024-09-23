@@ -9,11 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.2.13",
     "@nextui-org/react": "^2.4.7",
-    "@types/mdx": "^2.0.13",
     "eslint-plugin-prettier": "^5.2.1",
     "framer-motion": "^11.5.4",
     "jotai": "^2.10.0",
